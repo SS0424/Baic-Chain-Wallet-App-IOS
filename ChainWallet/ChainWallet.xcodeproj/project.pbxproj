@@ -1,0 +1,1542 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		181CD823218C196300E17105 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 181CD822218C196300E17105 /* AppDelegate.m */; };
+		181CD826218C196300E17105 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181CD825218C196300E17105 /* ViewController.m */; };
+		181CD829218C196300E17105 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 181CD827218C196300E17105 /* Main.storyboard */; };
+		181CD82B218C196500E17105 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 181CD82A218C196500E17105 /* Assets.xcassets */; };
+		181CD82E218C196500E17105 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 181CD82C218C196500E17105 /* LaunchScreen.storyboard */; };
+		181CD831218C196500E17105 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 181CD830218C196500E17105 /* main.m */; };
+		181CD83B218C196500E17105 /* ChainWalletTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 181CD83A218C196500E17105 /* ChainWalletTests.m */; };
+		181CD846218C196500E17105 /* ChainWalletUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 181CD845218C196500E17105 /* ChainWalletUITests.m */; };
+		181CD864218C22F500E17105 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181CD863218C22F500E17105 /* MainViewController.m */; };
+		181CD868218C415F00E17105 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181CD867218C415F00E17105 /* BaseViewController.m */; };
+		181CD86C218C424900E17105 /* UIButton+EnlargeTouchArea.m in Sources */ = {isa = PBXBuildFile; fileRef = 181CD86B218C424900E17105 /* UIButton+EnlargeTouchArea.m */; };
+		181CD86F218C44EF00E17105 /* CreateWalletViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181CD86E218C44EF00E17105 /* CreateWalletViewController.m */; };
+		181CD872218C4A6600E17105 /* BaseCreateInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181CD871218C4A6600E17105 /* BaseCreateInViewController.m */; };
+		181CD875218C4B5B00E17105 /* InPrivateKeyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181CD874218C4B5B00E17105 /* InPrivateKeyViewController.m */; };
+		182DF90721CCCA9900F444EB /* hmac.c in Sources */ = {isa = PBXBuildFile; fileRef = 182DF8C321CCCA9800F444EB /* hmac.c */; };
+		182DF91821CCCBC300F444EB /* ripemd160.c in Sources */ = {isa = PBXBuildFile; fileRef = 182DF91621CCCBC300F444EB /* ripemd160.c */; };
+		182DF91B21CCCBD800F444EB /* sha2.c in Sources */ = {isa = PBXBuildFile; fileRef = 182DF91A21CCCBD800F444EB /* sha2.c */; };
+		182DF91E21CCCC9900F444EB /* memzero.c in Sources */ = {isa = PBXBuildFile; fileRef = 182DF91D21CCCC9800F444EB /* memzero.c */; };
+		182DF92121CCCE7E00F444EB /* base58.c in Sources */ = {isa = PBXBuildFile; fileRef = 182DF91F21CCCE7900F444EB /* base58.c */; };
+		182DF92421CCD01800F444EB /* hasher.c in Sources */ = {isa = PBXBuildFile; fileRef = 182DF92221CCD01800F444EB /* hasher.c */; };
+		182DF92721CCD04000F444EB /* blake256.c in Sources */ = {isa = PBXBuildFile; fileRef = 182DF92521CCD04000F444EB /* blake256.c */; };
+		182DF9B121CCD46700F444EB /* BTCData.m in Sources */ = {isa = PBXBuildFile; fileRef = 182DF96B21CCD46700F444EB /* BTCData.m */; };
+		182DF9BC21CCD46700F444EB /* BTCBase58.m in Sources */ = {isa = PBXBuildFile; fileRef = 182DF97D21CCD46700F444EB /* BTCBase58.m */; };
+		182DF9BF21CCD46700F444EB /* BTCKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 182DF98421CCD46700F444EB /* BTCKey.m */; };
+		182DF9C821CCD55000F444EB /* BTCErrors.m in Sources */ = {isa = PBXBuildFile; fileRef = 182DF9C221CCD55000F444EB /* BTCErrors.m */; };
+		182DF9C921CCD55000F444EB /* BTCBigNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 182DF9C421CCD55000F444EB /* BTCBigNumber.m */; };
+		182DF9CA21CCD55000F444EB /* BTCAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = 182DF9C521CCD55000F444EB /* BTCAddress.m */; };
+		182DF9CD21CCD57600F444EB /* BTCCurvePoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 182DF9CB21CCD57600F444EB /* BTCCurvePoint.m */; };
+		182DF9D021CCD59700F444EB /* BTCProtocolSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 182DF9CE21CCD59700F444EB /* BTCProtocolSerialization.m */; };
+		182DF9D321CCD5EF00F444EB /* BTCScript.m in Sources */ = {isa = PBXBuildFile; fileRef = 182DF9D121CCD5EF00F444EB /* BTCScript.m */; };
+		182DF9D621CCD5FD00F444EB /* BTCOpcode.m in Sources */ = {isa = PBXBuildFile; fileRef = 182DF9D521CCD5FD00F444EB /* BTCOpcode.m */; };
+		182DF9D921CCD63900F444EB /* BTCNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 182DF9D721CCD63900F444EB /* BTCNetwork.m */; };
+		182DF9E021CCD70A00F444EB /* NSData+CommonCrypto.m in Sources */ = {isa = PBXBuildFile; fileRef = 182DF9DA21CCD70900F444EB /* NSData+CommonCrypto.m */; };
+		182DF9E121CCD70A00F444EB /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 182DF9DD21CCD70A00F444EB /* NSData+Base64.m */; };
+		182DF9E221CCD70A00F444EB /* NSString+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 182DF9DF21CCD70A00F444EB /* NSString+Base64.m */; };
+		182DF9E521CCDB9400F444EB /* BTC256.m in Sources */ = {isa = PBXBuildFile; fileRef = 182DF9E421CCDB9400F444EB /* BTC256.m */; };
+		183E302B21ABC0CE008962BC /* InputAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183E302A21ABC0CE008962BC /* InputAccountViewController.m */; };
+		183E303621ABD9BE008962BC /* AccountModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 183E303521ABD9BE008962BC /* AccountModel.m */; };
+		183E303C21ABDA66008962BC /* AccountPerKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = 183E303B21ABDA66008962BC /* AccountPerKeys.m */; };
+		183E304221ABE6B1008962BC /* AccountPermission.m in Sources */ = {isa = PBXBuildFile; fileRef = 183E304121ABE6B1008962BC /* AccountPermission.m */; };
+		183E304821ABEA1B008962BC /* testsetsateaset.m in Sources */ = {isa = PBXBuildFile; fileRef = 183E304721ABEA1B008962BC /* testsetsateaset.m */; };
+		184189F121D3673B00F3D800 /* AFHTTPSessionManager+Leak.m in Sources */ = {isa = PBXBuildFile; fileRef = 184189F021D3673B00F3D800 /* AFHTTPSessionManager+Leak.m */; };
+		1858181221B76DAD003AEB04 /* NSString+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 1858181121B76DAD003AEB04 /* NSString+Category.m */; };
+		185934DF21ACF020001E36DE /* AESCrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 185934D721ACF020001E36DE /* AESCrypt.m */; };
+		185934E821AD4B83001E36DE /* AlertViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 185934E721AD4B83001E36DE /* AlertViewManager.m */; };
+		185BD78621A800EA002F7D27 /* NSObject+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 185BD77C21A800EA002F7D27 /* NSObject+Extension.m */; };
+		187A015D2192B2F7004D4D0F /* TokenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 187A015C2192B2F7004D4D0F /* TokenViewController.m */; };
+		187A01612192B9B2004D4D0F /* TokenTradeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 187A01602192B9B2004D4D0F /* TokenTradeTableViewCell.m */; };
+		187A01652192D483004D4D0F /* ScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 187A01642192D483004D4D0F /* ScanViewController.m */; };
+		187A016A2193F4F4004D4D0F /* UIImage+AddCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 187A01692193F4F4004D4D0F /* UIImage+AddCategory.m */; };
+		187A016E21940742004D4D0F /* TransferViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 187A016D21940742004D4D0F /* TransferViewController.m */; };
+		187A0172219418FF004D4D0F /* WalletPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 187A0171219418FF004D4D0F /* WalletPopView.m */; };
+		187A0178219421D8004D4D0F /* NumsFieldView.m in Sources */ = {isa = PBXBuildFile; fileRef = 187A0174219421D8004D4D0F /* NumsFieldView.m */; };
+		187A0179219421D8004D4D0F /* NumsBaseTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 187A0175219421D8004D4D0F /* NumsBaseTextField.m */; };
+		187AF64621CB625F00849E37 /* GetBalanceRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 187AF64221CB625F00849E37 /* GetBalanceRequest.m */; };
+		187AF64721CB625F00849E37 /* GetAccoutRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 187AF64321CB625F00849E37 /* GetAccoutRequest.m */; };
+		187AF64A21CB65CE00849E37 /* TransferRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 187AF64921CB65CE00849E37 /* TransferRequest.m */; };
+		187E8A0221C3465E00EDBBB3 /* TokenModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 187E89FB21C3465E00EDBBB3 /* TokenModel.m */; };
+		187E8A0321C3465E00EDBBB3 /* AccountManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 187E89FC21C3465E00EDBBB3 /* AccountManager.m */; };
+		187E8A0421C3465E00EDBBB3 /* AccountInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 187E89FE21C3465E00EDBBB3 /* AccountInfoModel.m */; };
+		187E8A0521C3465E00EDBBB3 /* AccountInfoKeysModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 187E89FF21C3465E00EDBBB3 /* AccountInfoKeysModel.m */; };
+		187E8A0821C380D700EDBBB3 /* ResourceManagerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 187E8A0721C380D700EDBBB3 /* ResourceManagerModel.m */; };
+		187E8A0B21C387D300EDBBB3 /* ExportPrivateKeyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 187E8A0A21C387D300EDBBB3 /* ExportPrivateKeyModel.m */; };
+		188882F521AE826100A2338B /* TransferModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 188882F421AE826100A2338B /* TransferModel.m */; };
+		188882F921AE837700A2338B /* TransferModelManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 188882F821AE837700A2338B /* TransferModelManager.m */; };
+		1888830921AE884400A2338B /* NSDate+JKExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1888830021AE884400A2338B /* NSDate+JKExtension.m */; };
+		1888830A21AE884400A2338B /* NSDate+JKInternetDateTime.m in Sources */ = {isa = PBXBuildFile; fileRef = 1888830121AE884400A2338B /* NSDate+JKInternetDateTime.m */; };
+		1888830B21AE884400A2338B /* NSDate+JKFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1888830221AE884400A2338B /* NSDate+JKFormatter.m */; };
+		1888830C21AE884400A2338B /* NSDate+JKUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 1888830321AE884400A2338B /* NSDate+JKUtilities.m */; };
+		1888830D21AE884400A2338B /* NSDate+JKReporting.m in Sources */ = {isa = PBXBuildFile; fileRef = 1888830421AE884400A2338B /* NSDate+JKReporting.m */; };
+		1888830E21AE884400A2338B /* NSDate+JKZeroDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1888830521AE884400A2338B /* NSDate+JKZeroDate.m */; };
+		1888830F21AE884400A2338B /* NSDate+JKCupertinoYankee.m in Sources */ = {isa = PBXBuildFile; fileRef = 1888830821AE884400A2338B /* NSDate+JKCupertinoYankee.m */; };
+		189D136B21A690C4006EA5C2 /* BaseNetworkRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 189D136A21A690C4006EA5C2 /* BaseNetworkRequest.m */; };
+		18BE429421B6592000BE3FDE /* NSDate+ExFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BE429221B6591F00BE3FDE /* NSDate+ExFoundation.m */; };
+		18BE429A21B65E0100BE3FDE /* BAICByteWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BE429921B65E0100BE3FDE /* BAICByteWriter.m */; };
+		18BE42A621B65E9700BE3FDE /* tommath.c in Sources */ = {isa = PBXBuildFile; fileRef = 18BE42A021B65E9700BE3FDE /* tommath.c */; };
+		18BE42A721B65E9700BE3FDE /* JKBigInteger.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BE42A421B65E9700BE3FDE /* JKBigInteger.m */; };
+		18CEEE96218D70BB00F22EE4 /* SetTradePwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CEEE95218D70BB00F22EE4 /* SetTradePwdViewController.m */; };
+		18CEEE9B218D87EC00F22EE4 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CEEE9A218D87EC00F22EE4 /* HomeViewController.m */; };
+		18CEEE9E218D9CDF00F22EE4 /* HomeAssetTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CEEE9D218D9CDF00F22EE4 /* HomeAssetTableViewCell.m */; };
+		18CEEEA1218D9CEA00F22EE4 /* HomeTokenTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CEEEA0218D9CEA00F22EE4 /* HomeTokenTableViewCell.m */; };
+		18D2326D2195588600DD263A /* AccountManageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D2326C2195588600DD263A /* AccountManageViewController.m */; };
+		18D232742195604300DD263A /* AccountExchangeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D232732195604300DD263A /* AccountExchangeViewController.m */; };
+		18D232782195639E00DD263A /* ResourceManageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D232772195639E00DD263A /* ResourceManageViewController.m */; };
+		18D2327D21956B2900DD263A /* ExportWordsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D2327C21956B2900DD263A /* ExportWordsViewController.m */; };
+		18D2328121956B8500DD263A /* ExportPrivateKeyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D2328021956B8500DD263A /* ExportPrivateKeyViewController.m */; };
+		18D2328521956C9500DD263A /* ExportPrivateKeyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D2328421956C9500DD263A /* ExportPrivateKeyTableViewCell.m */; };
+		4B1F07CC21C8A62100B17ED6 /* NSData+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B1F076E21C8A62100B17ED6 /* NSData+Extend.m */; };
+		4B1F07CD21C8A62100B17ED6 /* NSString+Base58.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B1F076F21C8A62100B17ED6 /* NSString+Base58.m */; };
+		4B1F07CE21C8A62100B17ED6 /* NSData+Hash.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B1F077021C8A62100B17ED6 /* NSData+Hash.m */; };
+		4B1F07CF21C8A62100B17ED6 /* SHAHash.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B1F077321C8A62100B17ED6 /* SHAHash.m */; };
+		4B1F07D021C8A62100B17ED6 /* NSMutableData+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B1F077421C8A62100B17ED6 /* NSMutableData+Extend.m */; };
+		4BD86D6621C2249800570346 /* Sha256.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BD86D6521C2249800570346 /* Sha256.m */; };
+		4BD86D6921C235E000570346 /* BAICKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BD86D6821C235E000570346 /* BAICKey.m */; };
+		A6C97E5733FA0ED6E3C9FE7E /* libPods-ChainWallet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E4AF538CD9947742760F6B3 /* libPods-ChainWallet.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		181CD837218C196500E17105 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 181CD816218C196300E17105 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 181CD81D218C196300E17105;
+			remoteInfo = ChainWallet;
+		};
+		181CD842218C196500E17105 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 181CD816218C196300E17105 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 181CD81D218C196300E17105;
+			remoteInfo = ChainWallet;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		181CD81E218C196300E17105 /* ChainWallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChainWallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		181CD821218C196300E17105 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		181CD822218C196300E17105 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		181CD824218C196300E17105 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		181CD825218C196300E17105 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		181CD828218C196300E17105 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		181CD82A218C196500E17105 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		181CD82D218C196500E17105 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		181CD82F218C196500E17105 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		181CD830218C196500E17105 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		181CD836218C196500E17105 /* ChainWalletTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChainWalletTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		181CD83A218C196500E17105 /* ChainWalletTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChainWalletTests.m; sourceTree = "<group>"; };
+		181CD83C218C196500E17105 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		181CD841218C196500E17105 /* ChainWalletUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChainWalletUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		181CD845218C196500E17105 /* ChainWalletUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChainWalletUITests.m; sourceTree = "<group>"; };
+		181CD847218C196500E17105 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		181CD85D218C20C700E17105 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		181CD85E218C20E200E17105 /* UtilsMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UtilsMacro.h; sourceTree = "<group>"; };
+		181CD862218C22F500E17105 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		181CD863218C22F500E17105 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		181CD866218C415F00E17105 /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		181CD867218C415F00E17105 /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		181CD86A218C424900E17105 /* UIButton+EnlargeTouchArea.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+EnlargeTouchArea.h"; sourceTree = "<group>"; };
+		181CD86B218C424900E17105 /* UIButton+EnlargeTouchArea.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+EnlargeTouchArea.m"; sourceTree = "<group>"; };
+		181CD86D218C44EF00E17105 /* CreateWalletViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CreateWalletViewController.h; sourceTree = "<group>"; };
+		181CD86E218C44EF00E17105 /* CreateWalletViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CreateWalletViewController.m; sourceTree = "<group>"; };
+		181CD870218C4A6500E17105 /* BaseCreateInViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseCreateInViewController.h; sourceTree = "<group>"; };
+		181CD871218C4A6600E17105 /* BaseCreateInViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseCreateInViewController.m; sourceTree = "<group>"; };
+		181CD873218C4B5B00E17105 /* InPrivateKeyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InPrivateKeyViewController.h; sourceTree = "<group>"; };
+		181CD874218C4B5B00E17105 /* InPrivateKeyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InPrivateKeyViewController.m; sourceTree = "<group>"; };
+		182DF8C321CCCA9800F444EB /* hmac.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = hmac.c; sourceTree = "<group>"; };
+		182DF8D321CCCA9800F444EB /* hmac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hmac.h; sourceTree = "<group>"; };
+		182DF91521CCCBAC00F444EB /* options.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = options.h; sourceTree = "<group>"; };
+		182DF91621CCCBC300F444EB /* ripemd160.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ripemd160.c; sourceTree = "<group>"; };
+		182DF91721CCCBC300F444EB /* ripemd160.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ripemd160.h; sourceTree = "<group>"; };
+		182DF91921CCCBD800F444EB /* sha2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sha2.h; sourceTree = "<group>"; };
+		182DF91A21CCCBD800F444EB /* sha2.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sha2.c; sourceTree = "<group>"; };
+		182DF91C21CCCC9800F444EB /* memzero.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = memzero.h; sourceTree = "<group>"; };
+		182DF91D21CCCC9800F444EB /* memzero.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = memzero.c; sourceTree = "<group>"; };
+		182DF91F21CCCE7900F444EB /* base58.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = base58.c; sourceTree = "<group>"; };
+		182DF92021CCCE7E00F444EB /* base58.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = base58.h; sourceTree = "<group>"; };
+		182DF92221CCD01800F444EB /* hasher.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = hasher.c; sourceTree = "<group>"; };
+		182DF92321CCD01800F444EB /* hasher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hasher.h; sourceTree = "<group>"; };
+		182DF92521CCD04000F444EB /* blake256.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = blake256.c; sourceTree = "<group>"; };
+		182DF92621CCD04000F444EB /* blake256.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = blake256.h; sourceTree = "<group>"; };
+		182DF93121CCD46600F444EB /* BTCData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTCData.h; sourceTree = "<group>"; };
+		182DF94F21CCD46700F444EB /* BTCKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTCKey.h; sourceTree = "<group>"; };
+		182DF95521CCD46700F444EB /* BTCBase58.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTCBase58.h; sourceTree = "<group>"; };
+		182DF96B21CCD46700F444EB /* BTCData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTCData.m; sourceTree = "<group>"; };
+		182DF97D21CCD46700F444EB /* BTCBase58.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTCBase58.m; sourceTree = "<group>"; };
+		182DF98421CCD46700F444EB /* BTCKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTCKey.m; sourceTree = "<group>"; };
+		182DF9C121CCD52100F444EB /* BTCSignatureHashType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTCSignatureHashType.h; sourceTree = "<group>"; };
+		182DF9C221CCD55000F444EB /* BTCErrors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTCErrors.m; sourceTree = "<group>"; };
+		182DF9C321CCD55000F444EB /* BTCBigNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTCBigNumber.h; sourceTree = "<group>"; };
+		182DF9C421CCD55000F444EB /* BTCBigNumber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTCBigNumber.m; sourceTree = "<group>"; };
+		182DF9C521CCD55000F444EB /* BTCAddress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTCAddress.m; sourceTree = "<group>"; };
+		182DF9C621CCD55000F444EB /* BTCErrors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTCErrors.h; sourceTree = "<group>"; };
+		182DF9C721CCD55000F444EB /* BTCAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTCAddress.h; sourceTree = "<group>"; };
+		182DF9CB21CCD57600F444EB /* BTCCurvePoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTCCurvePoint.m; sourceTree = "<group>"; };
+		182DF9CC21CCD57600F444EB /* BTCCurvePoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTCCurvePoint.h; sourceTree = "<group>"; };
+		182DF9CE21CCD59700F444EB /* BTCProtocolSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTCProtocolSerialization.m; sourceTree = "<group>"; };
+		182DF9CF21CCD59700F444EB /* BTCProtocolSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTCProtocolSerialization.h; sourceTree = "<group>"; };
+		182DF9D121CCD5EF00F444EB /* BTCScript.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTCScript.m; sourceTree = "<group>"; };
+		182DF9D221CCD5EF00F444EB /* BTCScript.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTCScript.h; sourceTree = "<group>"; };
+		182DF9D421CCD5FD00F444EB /* BTCOpcode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTCOpcode.h; sourceTree = "<group>"; };
+		182DF9D521CCD5FD00F444EB /* BTCOpcode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTCOpcode.m; sourceTree = "<group>"; };
+		182DF9D721CCD63900F444EB /* BTCNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTCNetwork.m; sourceTree = "<group>"; };
+		182DF9D821CCD63900F444EB /* BTCNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTCNetwork.h; sourceTree = "<group>"; };
+		182DF9DA21CCD70900F444EB /* NSData+CommonCrypto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+CommonCrypto.m"; sourceTree = "<group>"; };
+		182DF9DB21CCD70900F444EB /* NSString+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Base64.h"; sourceTree = "<group>"; };
+		182DF9DC21CCD70900F444EB /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
+		182DF9DD21CCD70A00F444EB /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
+		182DF9DE21CCD70A00F444EB /* NSData+CommonCrypto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+CommonCrypto.h"; sourceTree = "<group>"; };
+		182DF9DF21CCD70A00F444EB /* NSString+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Base64.m"; sourceTree = "<group>"; };
+		182DF9E321CCDB9400F444EB /* BTC256.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTC256.h; sourceTree = "<group>"; };
+		182DF9E421CCDB9400F444EB /* BTC256.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTC256.m; sourceTree = "<group>"; };
+		183E302921ABC0CE008962BC /* InputAccountViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InputAccountViewController.h; sourceTree = "<group>"; };
+		183E302A21ABC0CE008962BC /* InputAccountViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InputAccountViewController.m; sourceTree = "<group>"; };
+		183E302C21ABCA96008962BC /* UrlMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UrlMacro.h; sourceTree = "<group>"; };
+		183E303421ABD9BE008962BC /* AccountModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AccountModel.h; sourceTree = "<group>"; };
+		183E303521ABD9BE008962BC /* AccountModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AccountModel.m; sourceTree = "<group>"; };
+		183E303A21ABDA66008962BC /* AccountPerKeys.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AccountPerKeys.h; sourceTree = "<group>"; };
+		183E303B21ABDA66008962BC /* AccountPerKeys.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AccountPerKeys.m; sourceTree = "<group>"; };
+		183E304021ABE6B1008962BC /* AccountPermission.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AccountPermission.h; sourceTree = "<group>"; };
+		183E304121ABE6B1008962BC /* AccountPermission.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AccountPermission.m; sourceTree = "<group>"; };
+		183E304621ABEA1B008962BC /* testsetsateaset.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = testsetsateaset.h; sourceTree = "<group>"; };
+		183E304721ABEA1B008962BC /* testsetsateaset.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = testsetsateaset.m; sourceTree = "<group>"; };
+		184189EF21D3673B00F3D800 /* AFHTTPSessionManager+Leak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AFHTTPSessionManager+Leak.h"; sourceTree = "<group>"; };
+		184189F021D3673B00F3D800 /* AFHTTPSessionManager+Leak.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AFHTTPSessionManager+Leak.m"; sourceTree = "<group>"; };
+		1858181021B76DAD003AEB04 /* NSString+Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Category.h"; sourceTree = "<group>"; };
+		1858181121B76DAD003AEB04 /* NSString+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Category.m"; sourceTree = "<group>"; };
+		185934D721ACF020001E36DE /* AESCrypt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AESCrypt.m; sourceTree = "<group>"; };
+		185934DA21ACF020001E36DE /* AESCrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AESCrypt.h; sourceTree = "<group>"; };
+		185934E621AD4B83001E36DE /* AlertViewManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlertViewManager.h; sourceTree = "<group>"; };
+		185934E721AD4B83001E36DE /* AlertViewManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlertViewManager.m; sourceTree = "<group>"; };
+		185BD77421A800EA002F7D27 /* NSObject+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Extension.h"; sourceTree = "<group>"; };
+		185BD77521A800EA002F7D27 /* libbase58.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = libbase58.h; sourceTree = "<group>"; };
+		185BD77C21A800EA002F7D27 /* NSObject+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Extension.m"; sourceTree = "<group>"; };
+		185BD77E21A800EA002F7D27 /* common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common.h; sourceTree = "<group>"; };
+		187A015B2192B2F7004D4D0F /* TokenViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TokenViewController.h; sourceTree = "<group>"; };
+		187A015C2192B2F7004D4D0F /* TokenViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TokenViewController.m; sourceTree = "<group>"; };
+		187A015F2192B9B2004D4D0F /* TokenTradeTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TokenTradeTableViewCell.h; sourceTree = "<group>"; };
+		187A01602192B9B2004D4D0F /* TokenTradeTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TokenTradeTableViewCell.m; sourceTree = "<group>"; };
+		187A01632192D483004D4D0F /* ScanViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScanViewController.h; sourceTree = "<group>"; };
+		187A01642192D483004D4D0F /* ScanViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScanViewController.m; sourceTree = "<group>"; };
+		187A01682193F4F4004D4D0F /* UIImage+AddCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+AddCategory.h"; sourceTree = "<group>"; };
+		187A01692193F4F4004D4D0F /* UIImage+AddCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+AddCategory.m"; sourceTree = "<group>"; };
+		187A016C21940742004D4D0F /* TransferViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransferViewController.h; sourceTree = "<group>"; };
+		187A016D21940742004D4D0F /* TransferViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransferViewController.m; sourceTree = "<group>"; };
+		187A0170219418FF004D4D0F /* WalletPopView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WalletPopView.h; sourceTree = "<group>"; };
+		187A0171219418FF004D4D0F /* WalletPopView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WalletPopView.m; sourceTree = "<group>"; };
+		187A0174219421D8004D4D0F /* NumsFieldView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumsFieldView.m; sourceTree = "<group>"; };
+		187A0175219421D8004D4D0F /* NumsBaseTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumsBaseTextField.m; sourceTree = "<group>"; };
+		187A0176219421D8004D4D0F /* NumsFieldView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumsFieldView.h; sourceTree = "<group>"; };
+		187A0177219421D8004D4D0F /* NumsBaseTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumsBaseTextField.h; sourceTree = "<group>"; };
+		187AF64221CB625F00849E37 /* GetBalanceRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetBalanceRequest.m; sourceTree = "<group>"; };
+		187AF64321CB625F00849E37 /* GetAccoutRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetAccoutRequest.m; sourceTree = "<group>"; };
+		187AF64421CB625F00849E37 /* GetBalanceRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetBalanceRequest.h; sourceTree = "<group>"; };
+		187AF64521CB625F00849E37 /* GetAccoutRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetAccoutRequest.h; sourceTree = "<group>"; };
+		187AF64821CB65CE00849E37 /* TransferRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransferRequest.h; sourceTree = "<group>"; };
+		187AF64921CB65CE00849E37 /* TransferRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransferRequest.m; sourceTree = "<group>"; };
+		187E89FA21C3465E00EDBBB3 /* AccountInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountInfoModel.h; sourceTree = "<group>"; };
+		187E89FB21C3465E00EDBBB3 /* TokenModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TokenModel.m; sourceTree = "<group>"; };
+		187E89FC21C3465E00EDBBB3 /* AccountManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountManager.m; sourceTree = "<group>"; };
+		187E89FD21C3465E00EDBBB3 /* AccountInfoKeysModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountInfoKeysModel.h; sourceTree = "<group>"; };
+		187E89FE21C3465E00EDBBB3 /* AccountInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountInfoModel.m; sourceTree = "<group>"; };
+		187E89FF21C3465E00EDBBB3 /* AccountInfoKeysModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountInfoKeysModel.m; sourceTree = "<group>"; };
+		187E8A0021C3465E00EDBBB3 /* AccountManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountManager.h; sourceTree = "<group>"; };
+		187E8A0121C3465E00EDBBB3 /* TokenModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TokenModel.h; sourceTree = "<group>"; };
+		187E8A0621C380D700EDBBB3 /* ResourceManagerModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResourceManagerModel.h; sourceTree = "<group>"; };
+		187E8A0721C380D700EDBBB3 /* ResourceManagerModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResourceManagerModel.m; sourceTree = "<group>"; };
+		187E8A0921C387D300EDBBB3 /* ExportPrivateKeyModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExportPrivateKeyModel.h; sourceTree = "<group>"; };
+		187E8A0A21C387D300EDBBB3 /* ExportPrivateKeyModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExportPrivateKeyModel.m; sourceTree = "<group>"; };
+		188882F321AE826100A2338B /* TransferModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransferModel.h; sourceTree = "<group>"; };
+		188882F421AE826100A2338B /* TransferModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransferModel.m; sourceTree = "<group>"; };
+		188882F721AE837700A2338B /* TransferModelManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransferModelManager.h; sourceTree = "<group>"; };
+		188882F821AE837700A2338B /* TransferModelManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransferModelManager.m; sourceTree = "<group>"; };
+		188882FB21AE884400A2338B /* NSDate+JKZeroDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+JKZeroDate.h"; sourceTree = "<group>"; };
+		188882FC21AE884400A2338B /* NSDate+JKReporting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+JKReporting.h"; sourceTree = "<group>"; };
+		188882FD21AE884400A2338B /* NSDate+JKUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+JKUtilities.h"; sourceTree = "<group>"; };
+		188882FE21AE884400A2338B /* NSDate+JKFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+JKFormatter.h"; sourceTree = "<group>"; };
+		188882FF21AE884400A2338B /* NSDate+JKCupertinoYankee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+JKCupertinoYankee.h"; sourceTree = "<group>"; };
+		1888830021AE884400A2338B /* NSDate+JKExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+JKExtension.m"; sourceTree = "<group>"; };
+		1888830121AE884400A2338B /* NSDate+JKInternetDateTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+JKInternetDateTime.m"; sourceTree = "<group>"; };
+		1888830221AE884400A2338B /* NSDate+JKFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+JKFormatter.m"; sourceTree = "<group>"; };
+		1888830321AE884400A2338B /* NSDate+JKUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+JKUtilities.m"; sourceTree = "<group>"; };
+		1888830421AE884400A2338B /* NSDate+JKReporting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+JKReporting.m"; sourceTree = "<group>"; };
+		1888830521AE884400A2338B /* NSDate+JKZeroDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+JKZeroDate.m"; sourceTree = "<group>"; };
+		1888830621AE884400A2338B /* NSDate+JKInternetDateTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+JKInternetDateTime.h"; sourceTree = "<group>"; };
+		1888830721AE884400A2338B /* NSDate+JKExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+JKExtension.h"; sourceTree = "<group>"; };
+		1888830821AE884400A2338B /* NSDate+JKCupertinoYankee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+JKCupertinoYankee.m"; sourceTree = "<group>"; };
+		189D136921A690C4006EA5C2 /* BaseNetworkRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseNetworkRequest.h; sourceTree = "<group>"; };
+		189D136A21A690C4006EA5C2 /* BaseNetworkRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseNetworkRequest.m; sourceTree = "<group>"; };
+		18BE429221B6591F00BE3FDE /* NSDate+ExFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+ExFoundation.m"; sourceTree = "<group>"; };
+		18BE429321B6592000BE3FDE /* NSDate+ExFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+ExFoundation.h"; sourceTree = "<group>"; };
+		18BE429821B65E0100BE3FDE /* BAICByteWriter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAICByteWriter.h; sourceTree = "<group>"; };
+		18BE429921B65E0100BE3FDE /* BAICByteWriter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAICByteWriter.m; sourceTree = "<group>"; };
+		18BE429C21B65E9700BE3FDE /* JKBigInteger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKBigInteger.h; sourceTree = "<group>"; };
+		18BE429F21B65E9700BE3FDE /* tommath_class.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tommath_class.h; sourceTree = "<group>"; };
+		18BE42A021B65E9700BE3FDE /* tommath.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = tommath.c; sourceTree = "<group>"; };
+		18BE42A121B65E9700BE3FDE /* tommath_superclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tommath_superclass.h; sourceTree = "<group>"; };
+		18BE42A221B65E9700BE3FDE /* tommath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tommath.h; sourceTree = "<group>"; };
+		18BE42A421B65E9700BE3FDE /* JKBigInteger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKBigInteger.m; sourceTree = "<group>"; };
+		18CEEE94218D70BB00F22EE4 /* SetTradePwdViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SetTradePwdViewController.h; sourceTree = "<group>"; };
+		18CEEE95218D70BB00F22EE4 /* SetTradePwdViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SetTradePwdViewController.m; sourceTree = "<group>"; };
+		18CEEE99218D87EC00F22EE4 /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		18CEEE9A218D87EC00F22EE4 /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		18CEEE9C218D9CDF00F22EE4 /* HomeAssetTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeAssetTableViewCell.h; sourceTree = "<group>"; };
+		18CEEE9D218D9CDF00F22EE4 /* HomeAssetTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeAssetTableViewCell.m; sourceTree = "<group>"; };
+		18CEEE9F218D9CEA00F22EE4 /* HomeTokenTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeTokenTableViewCell.h; sourceTree = "<group>"; };
+		18CEEEA0218D9CEA00F22EE4 /* HomeTokenTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeTokenTableViewCell.m; sourceTree = "<group>"; };
+		18D2326B2195588600DD263A /* AccountManageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AccountManageViewController.h; sourceTree = "<group>"; };
+		18D2326C2195588600DD263A /* AccountManageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AccountManageViewController.m; sourceTree = "<group>"; };
+		18D232722195604300DD263A /* AccountExchangeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AccountExchangeViewController.h; sourceTree = "<group>"; };
+		18D232732195604300DD263A /* AccountExchangeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AccountExchangeViewController.m; sourceTree = "<group>"; };
+		18D232762195639E00DD263A /* ResourceManageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResourceManageViewController.h; sourceTree = "<group>"; };
+		18D232772195639E00DD263A /* ResourceManageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResourceManageViewController.m; sourceTree = "<group>"; };
+		18D2327B21956B2900DD263A /* ExportWordsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExportWordsViewController.h; sourceTree = "<group>"; };
+		18D2327C21956B2900DD263A /* ExportWordsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExportWordsViewController.m; sourceTree = "<group>"; };
+		18D2327F21956B8500DD263A /* ExportPrivateKeyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExportPrivateKeyViewController.h; sourceTree = "<group>"; };
+		18D2328021956B8500DD263A /* ExportPrivateKeyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExportPrivateKeyViewController.m; sourceTree = "<group>"; };
+		18D2328321956C9500DD263A /* ExportPrivateKeyTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExportPrivateKeyTableViewCell.h; sourceTree = "<group>"; };
+		18D2328421956C9500DD263A /* ExportPrivateKeyTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExportPrivateKeyTableViewCell.m; sourceTree = "<group>"; };
+		3598C308790189222FCFCBD2 /* Pods-ChainWallet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChainWallet.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChainWallet/Pods-ChainWallet.debug.xcconfig"; sourceTree = "<group>"; };
+		4B1F076C21C8A62100B17ED6 /* NSMutableData+Extend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableData+Extend.h"; sourceTree = "<group>"; };
+		4B1F076D21C8A62100B17ED6 /* SHAHash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHAHash.h; sourceTree = "<group>"; };
+		4B1F076E21C8A62100B17ED6 /* NSData+Extend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Extend.m"; sourceTree = "<group>"; };
+		4B1F076F21C8A62100B17ED6 /* NSString+Base58.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Base58.m"; sourceTree = "<group>"; };
+		4B1F077021C8A62100B17ED6 /* NSData+Hash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Hash.m"; sourceTree = "<group>"; };
+		4B1F077121C8A62100B17ED6 /* Categories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Categories.h; sourceTree = "<group>"; };
+		4B1F077221C8A62100B17ED6 /* NSData+Extend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Extend.h"; sourceTree = "<group>"; };
+		4B1F077321C8A62100B17ED6 /* SHAHash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHAHash.m; sourceTree = "<group>"; };
+		4B1F077421C8A62100B17ED6 /* NSMutableData+Extend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableData+Extend.m"; sourceTree = "<group>"; };
+		4B1F077621C8A62100B17ED6 /* NSData+Hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Hash.h"; sourceTree = "<group>"; };
+		4B1F077721C8A62100B17ED6 /* NSString+Base58.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Base58.h"; sourceTree = "<group>"; };
+		4BD86D6421C2249800570346 /* Sha256.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sha256.h; sourceTree = "<group>"; };
+		4BD86D6521C2249800570346 /* Sha256.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sha256.m; sourceTree = "<group>"; };
+		4BD86D6721C235E000570346 /* BAICKey.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAICKey.h; sourceTree = "<group>"; };
+		4BD86D6821C235E000570346 /* BAICKey.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAICKey.m; sourceTree = "<group>"; };
+		9E4AF538CD9947742760F6B3 /* libPods-ChainWallet.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ChainWallet.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C24DBCAD3734A5B3640730D9 /* Pods-ChainWallet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChainWallet.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChainWallet/Pods-ChainWallet.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		181CD81B218C196300E17105 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6C97E5733FA0ED6E3C9FE7E /* libPods-ChainWallet.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		181CD833218C196500E17105 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		181CD83E218C196500E17105 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		181CD815218C196300E17105 = {
+			isa = PBXGroup;
+			children = (
+				181CD858218C1F9100E17105 /* Base */,
+				181CD857218C1F8900E17105 /* Expand */,
+				181CD856218C1F6E00E17105 /* PrefixHeaderPch */,
+				181CD855218C1F3300E17105 /* Tool */,
+				181CD854218C1F2C00E17105 /* Vender */,
+				181CD853218C1F2700E17105 /* Main */,
+				181CD820218C196300E17105 /* ChainWallet */,
+				181CD839218C196500E17105 /* ChainWalletTests */,
+				181CD844218C196500E17105 /* ChainWalletUITests */,
+				181CD81F218C196300E17105 /* Products */,
+				7E479D292C8638705CBC85AB /* Pods */,
+				B81EC9BA6CEC92BD4A08D507 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		181CD81F218C196300E17105 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				181CD81E218C196300E17105 /* ChainWallet.app */,
+				181CD836218C196500E17105 /* ChainWalletTests.xctest */,
+				181CD841218C196500E17105 /* ChainWalletUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		181CD820218C196300E17105 /* ChainWallet */ = {
+			isa = PBXGroup;
+			children = (
+				181CD821218C196300E17105 /* AppDelegate.h */,
+				181CD822218C196300E17105 /* AppDelegate.m */,
+				181CD824218C196300E17105 /* ViewController.h */,
+				181CD825218C196300E17105 /* ViewController.m */,
+				181CD827218C196300E17105 /* Main.storyboard */,
+				181CD82A218C196500E17105 /* Assets.xcassets */,
+				181CD82C218C196500E17105 /* LaunchScreen.storyboard */,
+				181CD82F218C196500E17105 /* Info.plist */,
+				181CD830218C196500E17105 /* main.m */,
+			);
+			path = ChainWallet;
+			sourceTree = "<group>";
+		};
+		181CD839218C196500E17105 /* ChainWalletTests */ = {
+			isa = PBXGroup;
+			children = (
+				181CD83A218C196500E17105 /* ChainWalletTests.m */,
+				181CD83C218C196500E17105 /* Info.plist */,
+			);
+			path = ChainWalletTests;
+			sourceTree = "<group>";
+		};
+		181CD844218C196500E17105 /* ChainWalletUITests */ = {
+			isa = PBXGroup;
+			children = (
+				181CD845218C196500E17105 /* ChainWalletUITests.m */,
+				181CD847218C196500E17105 /* Info.plist */,
+			);
+			path = ChainWalletUITests;
+			sourceTree = "<group>";
+		};
+		181CD853218C1F2700E17105 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				18D2327E21956B5D00DD263A /* ExportPrivateKey */,
+				18D2327921956ACD00DD263A /* ExportMemorizingWords */,
+				18D232752195637A00DD263A /* ResourceManage */,
+				18D2326E21955F9B00DD263A /* AccountExchange */,
+				18D2326A2195586D00DD263A /* AccountManage */,
+				187A016F2194189A004D4D0F /* PopView */,
+				187A016B219406E8004D4D0F /* Transfer */,
+				187A01622192D471004D4D0F /* Scan */,
+				187A015A2192B2D6004D4D0F /* Token */,
+				18CEEE97218D87B400F22EE4 /* Home */,
+				181CD860218C22A200E17105 /* CreateIn */,
+				181CD85F218C215100E17105 /* Main */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		181CD854218C1F2C00E17105 /* Vender */ = {
+			isa = PBXGroup;
+			children = (
+				182DF8C121CCCA9800F444EB /* crypto */,
+				4B1F076A21C8A62100B17ED6 /* Categories */,
+				182DF92B21CCD46600F444EB /* CoreBitcoin */,
+				18BE429B21B65E9700BE3FDE /* JKBigInteger */,
+				185934D521ACF020001E36DE /* AESCrypt */,
+				183E302E21ABCDEF008962BC /* NetworkRequest */,
+				185BD77121A800EA002F7D27 /* BAIC */,
+				187A0173219421D8004D4D0F /* NumsFieldView */,
+			);
+			path = Vender;
+			sourceTree = "<group>";
+		};
+		181CD855218C1F3300E17105 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				187E89F921C3465E00EDBBB3 /* AccountManager */,
+				188882F621AE834100A2338B /* TransferModelManager */,
+				185934E521AD4B62001E36DE /* AlertViewManager */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		181CD856218C1F6E00E17105 /* PrefixHeaderPch */ = {
+			isa = PBXGroup;
+			children = (
+				181CD85D218C20C700E17105 /* PrefixHeader.pch */,
+				181CD85E218C20E200E17105 /* UtilsMacro.h */,
+				183E302C21ABCA96008962BC /* UrlMacro.h */,
+			);
+			path = PrefixHeaderPch;
+			sourceTree = "<group>";
+		};
+		181CD857218C1F8900E17105 /* Expand */ = {
+			isa = PBXGroup;
+			children = (
+				184189F221D5F5A000F3D800 /* NSString+Category */,
+				188882FA21AE884400A2338B /* NSDateHelper */,
+				187A01662193F498004D4D0F /* UIImage */,
+				181CD869218C424900E17105 /* UIButton+EnlargeTouchArea */,
+			);
+			path = Expand;
+			sourceTree = "<group>";
+		};
+		181CD858218C1F9100E17105 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				189D136821A6873A006EA5C2 /* BaseRequest */,
+				181CD865218C412D00E17105 /* BaseViewController */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		181CD85F218C215100E17105 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				181CD862218C22F500E17105 /* MainViewController.h */,
+				181CD863218C22F500E17105 /* MainViewController.m */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		181CD860218C22A200E17105 /* CreateIn */ = {
+			isa = PBXGroup;
+			children = (
+				181CD870218C4A6500E17105 /* BaseCreateInViewController.h */,
+				181CD871218C4A6600E17105 /* BaseCreateInViewController.m */,
+				181CD86D218C44EF00E17105 /* CreateWalletViewController.h */,
+				181CD86E218C44EF00E17105 /* CreateWalletViewController.m */,
+				181CD873218C4B5B00E17105 /* InPrivateKeyViewController.h */,
+				181CD874218C4B5B00E17105 /* InPrivateKeyViewController.m */,
+				183E302921ABC0CE008962BC /* InputAccountViewController.h */,
+				183E302A21ABC0CE008962BC /* InputAccountViewController.m */,
+				18CEEE94218D70BB00F22EE4 /* SetTradePwdViewController.h */,
+				18CEEE95218D70BB00F22EE4 /* SetTradePwdViewController.m */,
+				183E303321ABD990008962BC /* Model */,
+			);
+			path = CreateIn;
+			sourceTree = "<group>";
+		};
+		181CD865218C412D00E17105 /* BaseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				181CD866218C415F00E17105 /* BaseViewController.h */,
+				181CD867218C415F00E17105 /* BaseViewController.m */,
+			);
+			path = BaseViewController;
+			sourceTree = "<group>";
+		};
+		181CD869218C424900E17105 /* UIButton+EnlargeTouchArea */ = {
+			isa = PBXGroup;
+			children = (
+				181CD86A218C424900E17105 /* UIButton+EnlargeTouchArea.h */,
+				181CD86B218C424900E17105 /* UIButton+EnlargeTouchArea.m */,
+			);
+			path = "UIButton+EnlargeTouchArea";
+			sourceTree = "<group>";
+		};
+		182DF8C121CCCA9800F444EB /* crypto */ = {
+			isa = PBXGroup;
+			children = (
+				182DF92521CCD04000F444EB /* blake256.c */,
+				182DF92621CCD04000F444EB /* blake256.h */,
+				182DF92221CCD01800F444EB /* hasher.c */,
+				182DF92321CCD01800F444EB /* hasher.h */,
+				182DF8D321CCCA9800F444EB /* hmac.h */,
+				182DF8C321CCCA9800F444EB /* hmac.c */,
+				182DF91521CCCBAC00F444EB /* options.h */,
+				182DF91621CCCBC300F444EB /* ripemd160.c */,
+				182DF91721CCCBC300F444EB /* ripemd160.h */,
+				182DF91A21CCCBD800F444EB /* sha2.c */,
+				182DF91921CCCBD800F444EB /* sha2.h */,
+				182DF91D21CCCC9800F444EB /* memzero.c */,
+				182DF91C21CCCC9800F444EB /* memzero.h */,
+				182DF91F21CCCE7900F444EB /* base58.c */,
+				182DF92021CCCE7E00F444EB /* base58.h */,
+			);
+			path = crypto;
+			sourceTree = "<group>";
+		};
+		182DF92B21CCD46600F444EB /* CoreBitcoin */ = {
+			isa = PBXGroup;
+			children = (
+				182DF9E321CCDB9400F444EB /* BTC256.h */,
+				182DF9E421CCDB9400F444EB /* BTC256.m */,
+				182DF94F21CCD46700F444EB /* BTCKey.h */,
+				182DF98421CCD46700F444EB /* BTCKey.m */,
+				182DF9C721CCD55000F444EB /* BTCAddress.h */,
+				182DF9C521CCD55000F444EB /* BTCAddress.m */,
+				182DF9CC21CCD57600F444EB /* BTCCurvePoint.h */,
+				182DF9CB21CCD57600F444EB /* BTCCurvePoint.m */,
+				182DF9C321CCD55000F444EB /* BTCBigNumber.h */,
+				182DF9C421CCD55000F444EB /* BTCBigNumber.m */,
+				182DF9CF21CCD59700F444EB /* BTCProtocolSerialization.h */,
+				182DF9CE21CCD59700F444EB /* BTCProtocolSerialization.m */,
+				182DF9C621CCD55000F444EB /* BTCErrors.h */,
+				182DF9C221CCD55000F444EB /* BTCErrors.m */,
+				182DF9D221CCD5EF00F444EB /* BTCScript.h */,
+				182DF9D121CCD5EF00F444EB /* BTCScript.m */,
+				182DF9D421CCD5FD00F444EB /* BTCOpcode.h */,
+				182DF9D521CCD5FD00F444EB /* BTCOpcode.m */,
+				182DF9C121CCD52100F444EB /* BTCSignatureHashType.h */,
+				182DF95521CCD46700F444EB /* BTCBase58.h */,
+				182DF97D21CCD46700F444EB /* BTCBase58.m */,
+				182DF93121CCD46600F444EB /* BTCData.h */,
+				182DF96B21CCD46700F444EB /* BTCData.m */,
+				182DF9D821CCD63900F444EB /* BTCNetwork.h */,
+				182DF9D721CCD63900F444EB /* BTCNetwork.m */,
+			);
+			path = CoreBitcoin;
+			sourceTree = "<group>";
+		};
+		183E302E21ABCDEF008962BC /* NetworkRequest */ = {
+			isa = PBXGroup;
+			children = (
+				187AF64521CB625F00849E37 /* GetAccoutRequest.h */,
+				187AF64321CB625F00849E37 /* GetAccoutRequest.m */,
+				187AF64421CB625F00849E37 /* GetBalanceRequest.h */,
+				187AF64221CB625F00849E37 /* GetBalanceRequest.m */,
+				187AF64821CB65CE00849E37 /* TransferRequest.h */,
+				187AF64921CB65CE00849E37 /* TransferRequest.m */,
+			);
+			path = NetworkRequest;
+			sourceTree = "<group>";
+		};
+		183E303321ABD990008962BC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				183E303421ABD9BE008962BC /* AccountModel.h */,
+				183E303521ABD9BE008962BC /* AccountModel.m */,
+				183E304621ABEA1B008962BC /* testsetsateaset.h */,
+				183E304721ABEA1B008962BC /* testsetsateaset.m */,
+				183E304021ABE6B1008962BC /* AccountPermission.h */,
+				183E304121ABE6B1008962BC /* AccountPermission.m */,
+				183E303A21ABDA66008962BC /* AccountPerKeys.h */,
+				183E303B21ABDA66008962BC /* AccountPerKeys.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		184189F221D5F5A000F3D800 /* NSString+Category */ = {
+			isa = PBXGroup;
+			children = (
+				1858181021B76DAD003AEB04 /* NSString+Category.h */,
+				1858181121B76DAD003AEB04 /* NSString+Category.m */,
+			);
+			path = "NSString+Category";
+			sourceTree = "<group>";
+		};
+		185934D521ACF020001E36DE /* AESCrypt */ = {
+			isa = PBXGroup;
+			children = (
+				185934DA21ACF020001E36DE /* AESCrypt.h */,
+				185934D721ACF020001E36DE /* AESCrypt.m */,
+				182DF9DC21CCD70900F444EB /* NSData+Base64.h */,
+				182DF9DD21CCD70A00F444EB /* NSData+Base64.m */,
+				182DF9DE21CCD70A00F444EB /* NSData+CommonCrypto.h */,
+				182DF9DA21CCD70900F444EB /* NSData+CommonCrypto.m */,
+				182DF9DB21CCD70900F444EB /* NSString+Base64.h */,
+				182DF9DF21CCD70A00F444EB /* NSString+Base64.m */,
+			);
+			path = AESCrypt;
+			sourceTree = "<group>";
+		};
+		185934E521AD4B62001E36DE /* AlertViewManager */ = {
+			isa = PBXGroup;
+			children = (
+				185934E621AD4B83001E36DE /* AlertViewManager.h */,
+				185934E721AD4B83001E36DE /* AlertViewManager.m */,
+			);
+			path = AlertViewManager;
+			sourceTree = "<group>";
+		};
+		185BD77121A800EA002F7D27 /* BAIC */ = {
+			isa = PBXGroup;
+			children = (
+				4BD86D6721C235E000570346 /* BAICKey.h */,
+				4BD86D6821C235E000570346 /* BAICKey.m */,
+				18BE429821B65E0100BE3FDE /* BAICByteWriter.h */,
+				18BE429921B65E0100BE3FDE /* BAICByteWriter.m */,
+				185BD77421A800EA002F7D27 /* NSObject+Extension.h */,
+				185BD77C21A800EA002F7D27 /* NSObject+Extension.m */,
+				4BD86D6421C2249800570346 /* Sha256.h */,
+				4BD86D6521C2249800570346 /* Sha256.m */,
+				185BD77521A800EA002F7D27 /* libbase58.h */,
+				185BD77E21A800EA002F7D27 /* common.h */,
+			);
+			path = BAIC;
+			sourceTree = "<group>";
+		};
+		187A015A2192B2D6004D4D0F /* Token */ = {
+			isa = PBXGroup;
+			children = (
+				187A015B2192B2F7004D4D0F /* TokenViewController.h */,
+				187A015C2192B2F7004D4D0F /* TokenViewController.m */,
+				187A015E2192B994004D4D0F /* View */,
+			);
+			path = Token;
+			sourceTree = "<group>";
+		};
+		187A015E2192B994004D4D0F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				187A015F2192B9B2004D4D0F /* TokenTradeTableViewCell.h */,
+				187A01602192B9B2004D4D0F /* TokenTradeTableViewCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		187A01622192D471004D4D0F /* Scan */ = {
+			isa = PBXGroup;
+			children = (
+				187A01632192D483004D4D0F /* ScanViewController.h */,
+				187A01642192D483004D4D0F /* ScanViewController.m */,
+			);
+			path = Scan;
+			sourceTree = "<group>";
+		};
+		187A01662193F498004D4D0F /* UIImage */ = {
+			isa = PBXGroup;
+			children = (
+				187A01682193F4F4004D4D0F /* UIImage+AddCategory.h */,
+				187A01692193F4F4004D4D0F /* UIImage+AddCategory.m */,
+			);
+			path = UIImage;
+			sourceTree = "<group>";
+		};
+		187A016B219406E8004D4D0F /* Transfer */ = {
+			isa = PBXGroup;
+			children = (
+				187A016C21940742004D4D0F /* TransferViewController.h */,
+				187A016D21940742004D4D0F /* TransferViewController.m */,
+				188882F221AE822900A2338B /* Model */,
+			);
+			path = Transfer;
+			sourceTree = "<group>";
+		};
+		187A016F2194189A004D4D0F /* PopView */ = {
+			isa = PBXGroup;
+			children = (
+				187A0170219418FF004D4D0F /* WalletPopView.h */,
+				187A0171219418FF004D4D0F /* WalletPopView.m */,
+			);
+			path = PopView;
+			sourceTree = "<group>";
+		};
+		187A0173219421D8004D4D0F /* NumsFieldView */ = {
+			isa = PBXGroup;
+			children = (
+				187A0176219421D8004D4D0F /* NumsFieldView.h */,
+				187A0174219421D8004D4D0F /* NumsFieldView.m */,
+				187A0177219421D8004D4D0F /* NumsBaseTextField.h */,
+				187A0175219421D8004D4D0F /* NumsBaseTextField.m */,
+			);
+			path = NumsFieldView;
+			sourceTree = "<group>";
+		};
+		187E89F921C3465E00EDBBB3 /* AccountManager */ = {
+			isa = PBXGroup;
+			children = (
+				187E8A0021C3465E00EDBBB3 /* AccountManager.h */,
+				187E89FC21C3465E00EDBBB3 /* AccountManager.m */,
+				187E89FA21C3465E00EDBBB3 /* AccountInfoModel.h */,
+				187E89FE21C3465E00EDBBB3 /* AccountInfoModel.m */,
+				187E89FD21C3465E00EDBBB3 /* AccountInfoKeysModel.h */,
+				187E89FF21C3465E00EDBBB3 /* AccountInfoKeysModel.m */,
+				187E8A0121C3465E00EDBBB3 /* TokenModel.h */,
+				187E89FB21C3465E00EDBBB3 /* TokenModel.m */,
+			);
+			path = AccountManager;
+			sourceTree = "<group>";
+		};
+		188882F221AE822900A2338B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				188882F321AE826100A2338B /* TransferModel.h */,
+				188882F421AE826100A2338B /* TransferModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		188882F621AE834100A2338B /* TransferModelManager */ = {
+			isa = PBXGroup;
+			children = (
+				188882F721AE837700A2338B /* TransferModelManager.h */,
+				188882F821AE837700A2338B /* TransferModelManager.m */,
+			);
+			path = TransferModelManager;
+			sourceTree = "<group>";
+		};
+		188882FA21AE884400A2338B /* NSDateHelper */ = {
+			isa = PBXGroup;
+			children = (
+				18BE429321B6592000BE3FDE /* NSDate+ExFoundation.h */,
+				18BE429221B6591F00BE3FDE /* NSDate+ExFoundation.m */,
+				188882FB21AE884400A2338B /* NSDate+JKZeroDate.h */,
+				1888830521AE884400A2338B /* NSDate+JKZeroDate.m */,
+				188882FC21AE884400A2338B /* NSDate+JKReporting.h */,
+				1888830421AE884400A2338B /* NSDate+JKReporting.m */,
+				188882FD21AE884400A2338B /* NSDate+JKUtilities.h */,
+				1888830321AE884400A2338B /* NSDate+JKUtilities.m */,
+				188882FE21AE884400A2338B /* NSDate+JKFormatter.h */,
+				1888830221AE884400A2338B /* NSDate+JKFormatter.m */,
+				188882FF21AE884400A2338B /* NSDate+JKCupertinoYankee.h */,
+				1888830821AE884400A2338B /* NSDate+JKCupertinoYankee.m */,
+				1888830621AE884400A2338B /* NSDate+JKInternetDateTime.h */,
+				1888830121AE884400A2338B /* NSDate+JKInternetDateTime.m */,
+				1888830721AE884400A2338B /* NSDate+JKExtension.h */,
+				1888830021AE884400A2338B /* NSDate+JKExtension.m */,
+			);
+			path = NSDateHelper;
+			sourceTree = "<group>";
+		};
+		189D136821A6873A006EA5C2 /* BaseRequest */ = {
+			isa = PBXGroup;
+			children = (
+				189D136921A690C4006EA5C2 /* BaseNetworkRequest.h */,
+				189D136A21A690C4006EA5C2 /* BaseNetworkRequest.m */,
+				184189EF21D3673B00F3D800 /* AFHTTPSessionManager+Leak.h */,
+				184189F021D3673B00F3D800 /* AFHTTPSessionManager+Leak.m */,
+			);
+			path = BaseRequest;
+			sourceTree = "<group>";
+		};
+		18BE429B21B65E9700BE3FDE /* JKBigInteger */ = {
+			isa = PBXGroup;
+			children = (
+				18BE429C21B65E9700BE3FDE /* JKBigInteger.h */,
+				18BE42A421B65E9700BE3FDE /* JKBigInteger.m */,
+				18BE429E21B65E9700BE3FDE /* LibTomMath */,
+			);
+			path = JKBigInteger;
+			sourceTree = "<group>";
+		};
+		18BE429E21B65E9700BE3FDE /* LibTomMath */ = {
+			isa = PBXGroup;
+			children = (
+				18BE429F21B65E9700BE3FDE /* tommath_class.h */,
+				18BE42A021B65E9700BE3FDE /* tommath.c */,
+				18BE42A121B65E9700BE3FDE /* tommath_superclass.h */,
+				18BE42A221B65E9700BE3FDE /* tommath.h */,
+			);
+			path = LibTomMath;
+			sourceTree = "<group>";
+		};
+		18CEEE97218D87B400F22EE4 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				18CEEE99218D87EC00F22EE4 /* HomeViewController.h */,
+				18CEEE9A218D87EC00F22EE4 /* HomeViewController.m */,
+				18CEEE98218D87C200F22EE4 /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		18CEEE98218D87C200F22EE4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				18CEEE9C218D9CDF00F22EE4 /* HomeAssetTableViewCell.h */,
+				18CEEE9D218D9CDF00F22EE4 /* HomeAssetTableViewCell.m */,
+				18CEEE9F218D9CEA00F22EE4 /* HomeTokenTableViewCell.h */,
+				18CEEEA0218D9CEA00F22EE4 /* HomeTokenTableViewCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		18D2326A2195586D00DD263A /* AccountManage */ = {
+			isa = PBXGroup;
+			children = (
+				18D2326B2195588600DD263A /* AccountManageViewController.h */,
+				18D2326C2195588600DD263A /* AccountManageViewController.m */,
+			);
+			path = AccountManage;
+			sourceTree = "<group>";
+		};
+		18D2326E21955F9B00DD263A /* AccountExchange */ = {
+			isa = PBXGroup;
+			children = (
+				18D232722195604300DD263A /* AccountExchangeViewController.h */,
+				18D232732195604300DD263A /* AccountExchangeViewController.m */,
+			);
+			path = AccountExchange;
+			sourceTree = "<group>";
+		};
+		18D232752195637A00DD263A /* ResourceManage */ = {
+			isa = PBXGroup;
+			children = (
+				18D232762195639E00DD263A /* ResourceManageViewController.h */,
+				18D232772195639E00DD263A /* ResourceManageViewController.m */,
+				187E8A0621C380D700EDBBB3 /* ResourceManagerModel.h */,
+				187E8A0721C380D700EDBBB3 /* ResourceManagerModel.m */,
+			);
+			path = ResourceManage;
+			sourceTree = "<group>";
+		};
+		18D2327921956ACD00DD263A /* ExportMemorizingWords */ = {
+			isa = PBXGroup;
+			children = (
+				18D2327B21956B2900DD263A /* ExportWordsViewController.h */,
+				18D2327C21956B2900DD263A /* ExportWordsViewController.m */,
+			);
+			path = ExportMemorizingWords;
+			sourceTree = "<group>";
+		};
+		18D2327E21956B5D00DD263A /* ExportPrivateKey */ = {
+			isa = PBXGroup;
+			children = (
+				18D2327F21956B8500DD263A /* ExportPrivateKeyViewController.h */,
+				18D2328021956B8500DD263A /* ExportPrivateKeyViewController.m */,
+				187E8A0921C387D300EDBBB3 /* ExportPrivateKeyModel.h */,
+				187E8A0A21C387D300EDBBB3 /* ExportPrivateKeyModel.m */,
+				18D2328221956C7E00DD263A /* View */,
+			);
+			path = ExportPrivateKey;
+			sourceTree = "<group>";
+		};
+		18D2328221956C7E00DD263A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				18D2328321956C9500DD263A /* ExportPrivateKeyTableViewCell.h */,
+				18D2328421956C9500DD263A /* ExportPrivateKeyTableViewCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4B1F076A21C8A62100B17ED6 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				4B1F076C21C8A62100B17ED6 /* NSMutableData+Extend.h */,
+				4B1F076D21C8A62100B17ED6 /* SHAHash.h */,
+				4B1F077321C8A62100B17ED6 /* SHAHash.m */,
+				4B1F076E21C8A62100B17ED6 /* NSData+Extend.m */,
+				4B1F076F21C8A62100B17ED6 /* NSString+Base58.m */,
+				4B1F077021C8A62100B17ED6 /* NSData+Hash.m */,
+				4B1F077121C8A62100B17ED6 /* Categories.h */,
+				4B1F077221C8A62100B17ED6 /* NSData+Extend.h */,
+				4B1F077421C8A62100B17ED6 /* NSMutableData+Extend.m */,
+				4B1F077621C8A62100B17ED6 /* NSData+Hash.h */,
+				4B1F077721C8A62100B17ED6 /* NSString+Base58.h */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		7E479D292C8638705CBC85AB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3598C308790189222FCFCBD2 /* Pods-ChainWallet.debug.xcconfig */,
+				C24DBCAD3734A5B3640730D9 /* Pods-ChainWallet.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B81EC9BA6CEC92BD4A08D507 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9E4AF538CD9947742760F6B3 /* libPods-ChainWallet.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		181CD81D218C196300E17105 /* ChainWallet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 181CD84A218C196500E17105 /* Build configuration list for PBXNativeTarget "ChainWallet" */;
+			buildPhases = (
+				6BB29A9CE61DB19873A4E5AE /* [CP] Check Pods Manifest.lock */,
+				181CD81A218C196300E17105 /* Sources */,
+				181CD81B218C196300E17105 /* Frameworks */,
+				181CD81C218C196300E17105 /* Resources */,
+				DAADA92E19612E8D55DCCEA5 /* [CP] Copy Pods Resources */,
+				5B09F164C82082E4E7A6BAA5 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ChainWallet;
+			productName = ChainWallet;
+			productReference = 181CD81E218C196300E17105 /* ChainWallet.app */;
+			productType = "com.apple.product-type.application";
+		};
+		181CD835218C196500E17105 /* ChainWalletTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 181CD84D218C196500E17105 /* Build configuration list for PBXNativeTarget "ChainWalletTests" */;
+			buildPhases = (
+				181CD832218C196500E17105 /* Sources */,
+				181CD833218C196500E17105 /* Frameworks */,
+				181CD834218C196500E17105 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				181CD838218C196500E17105 /* PBXTargetDependency */,
+			);
+			name = ChainWalletTests;
+			productName = ChainWalletTests;
+			productReference = 181CD836218C196500E17105 /* ChainWalletTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		181CD840218C196500E17105 /* ChainWalletUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 181CD850218C196500E17105 /* Build configuration list for PBXNativeTarget "ChainWalletUITests" */;
+			buildPhases = (
+				181CD83D218C196500E17105 /* Sources */,
+				181CD83E218C196500E17105 /* Frameworks */,
+				181CD83F218C196500E17105 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				181CD843218C196500E17105 /* PBXTargetDependency */,
+			);
+			name = ChainWalletUITests;
+			productName = ChainWalletUITests;
+			productReference = 181CD841218C196500E17105 /* ChainWalletUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		181CD816218C196300E17105 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = zcw;
+				TargetAttributes = {
+					181CD81D218C196300E17105 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					181CD835218C196500E17105 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = 181CD81D218C196300E17105;
+					};
+					181CD840218C196500E17105 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = 181CD81D218C196300E17105;
+					};
+				};
+			};
+			buildConfigurationList = 181CD819218C196300E17105 /* Build configuration list for PBXProject "ChainWallet" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 181CD815218C196300E17105;
+			productRefGroup = 181CD81F218C196300E17105 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				181CD81D218C196300E17105 /* ChainWallet */,
+				181CD835218C196500E17105 /* ChainWalletTests */,
+				181CD840218C196500E17105 /* ChainWalletUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		181CD81C218C196300E17105 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				181CD82E218C196500E17105 /* LaunchScreen.storyboard in Resources */,
+				181CD82B218C196500E17105 /* Assets.xcassets in Resources */,
+				181CD829218C196300E17105 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		181CD834218C196500E17105 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		181CD83F218C196500E17105 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5B09F164C82082E4E7A6BAA5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ChainWallet/Pods-ChainWallet-frameworks.sh",
+				"${PODS_ROOT}/GRKOpenSSLFramework/OpenSSL-iOS/bin/openssl.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChainWallet/Pods-ChainWallet-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6BB29A9CE61DB19873A4E5AE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ChainWallet-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DAADA92E19612E8D55DCCEA5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ChainWallet/Pods-ChainWallet-resources.sh",
+				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
+				"${PODS_ROOT}/LBXScan/LBXScan/UI/CodeScan.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IQKeyboardManager.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/CodeScan.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChainWallet/Pods-ChainWallet-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		181CD81A218C196300E17105 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				187A0178219421D8004D4D0F /* NumsFieldView.m in Sources */,
+				183E303C21ABDA66008962BC /* AccountPerKeys.m in Sources */,
+				4B1F07CE21C8A62100B17ED6 /* NSData+Hash.m in Sources */,
+				182DF9D621CCD5FD00F444EB /* BTCOpcode.m in Sources */,
+				1888830E21AE884400A2338B /* NSDate+JKZeroDate.m in Sources */,
+				18D232782195639E00DD263A /* ResourceManageViewController.m in Sources */,
+				188882F521AE826100A2338B /* TransferModel.m in Sources */,
+				182DF91821CCCBC300F444EB /* ripemd160.c in Sources */,
+				184189F121D3673B00F3D800 /* AFHTTPSessionManager+Leak.m in Sources */,
+				181CD826218C196300E17105 /* ViewController.m in Sources */,
+				4B1F07D021C8A62100B17ED6 /* NSMutableData+Extend.m in Sources */,
+				182DF9C821CCD55000F444EB /* BTCErrors.m in Sources */,
+				183E302B21ABC0CE008962BC /* InputAccountViewController.m in Sources */,
+				181CD868218C415F00E17105 /* BaseViewController.m in Sources */,
+				182DF9D321CCD5EF00F444EB /* BTCScript.m in Sources */,
+				1888830C21AE884400A2338B /* NSDate+JKUtilities.m in Sources */,
+				185934E821AD4B83001E36DE /* AlertViewManager.m in Sources */,
+				18BE429A21B65E0100BE3FDE /* BAICByteWriter.m in Sources */,
+				182DF9B121CCD46700F444EB /* BTCData.m in Sources */,
+				187E8A0221C3465E00EDBBB3 /* TokenModel.m in Sources */,
+				18D2328121956B8500DD263A /* ExportPrivateKeyViewController.m in Sources */,
+				18D2328521956C9500DD263A /* ExportPrivateKeyTableViewCell.m in Sources */,
+				187A015D2192B2F7004D4D0F /* TokenViewController.m in Sources */,
+				183E304221ABE6B1008962BC /* AccountPermission.m in Sources */,
+				182DF9E121CCD70A00F444EB /* NSData+Base64.m in Sources */,
+				185934DF21ACF020001E36DE /* AESCrypt.m in Sources */,
+				182DF9E521CCDB9400F444EB /* BTC256.m in Sources */,
+				187A01652192D483004D4D0F /* ScanViewController.m in Sources */,
+				4BD86D6621C2249800570346 /* Sha256.m in Sources */,
+				18D2326D2195588600DD263A /* AccountManageViewController.m in Sources */,
+				4BD86D6921C235E000570346 /* BAICKey.m in Sources */,
+				185BD78621A800EA002F7D27 /* NSObject+Extension.m in Sources */,
+				182DF9E221CCD70A00F444EB /* NSString+Base64.m in Sources */,
+				188882F921AE837700A2338B /* TransferModelManager.m in Sources */,
+				182DF9BC21CCD46700F444EB /* BTCBase58.m in Sources */,
+				187AF64621CB625F00849E37 /* GetBalanceRequest.m in Sources */,
+				182DF9BF21CCD46700F444EB /* BTCKey.m in Sources */,
+				187A016A2193F4F4004D4D0F /* UIImage+AddCategory.m in Sources */,
+				187AF64721CB625F00849E37 /* GetAccoutRequest.m in Sources */,
+				181CD831218C196500E17105 /* main.m in Sources */,
+				182DF92721CCD04000F444EB /* blake256.c in Sources */,
+				187A0172219418FF004D4D0F /* WalletPopView.m in Sources */,
+				18D2327D21956B2900DD263A /* ExportWordsViewController.m in Sources */,
+				181CD823218C196300E17105 /* AppDelegate.m in Sources */,
+				187A0179219421D8004D4D0F /* NumsBaseTextField.m in Sources */,
+				182DF92121CCCE7E00F444EB /* base58.c in Sources */,
+				187E8A0421C3465E00EDBBB3 /* AccountInfoModel.m in Sources */,
+				1888830B21AE884400A2338B /* NSDate+JKFormatter.m in Sources */,
+				187A01612192B9B2004D4D0F /* TokenTradeTableViewCell.m in Sources */,
+				181CD872218C4A6600E17105 /* BaseCreateInViewController.m in Sources */,
+				182DF9D921CCD63900F444EB /* BTCNetwork.m in Sources */,
+				1888830A21AE884400A2338B /* NSDate+JKInternetDateTime.m in Sources */,
+				18CEEEA1218D9CEA00F22EE4 /* HomeTokenTableViewCell.m in Sources */,
+				181CD864218C22F500E17105 /* MainViewController.m in Sources */,
+				1888830F21AE884400A2338B /* NSDate+JKCupertinoYankee.m in Sources */,
+				183E303621ABD9BE008962BC /* AccountModel.m in Sources */,
+				18CEEE9B218D87EC00F22EE4 /* HomeViewController.m in Sources */,
+				182DF9CD21CCD57600F444EB /* BTCCurvePoint.m in Sources */,
+				1888830D21AE884400A2338B /* NSDate+JKReporting.m in Sources */,
+				18CEEE96218D70BB00F22EE4 /* SetTradePwdViewController.m in Sources */,
+				181CD86F218C44EF00E17105 /* CreateWalletViewController.m in Sources */,
+				182DF9E021CCD70A00F444EB /* NSData+CommonCrypto.m in Sources */,
+				187E8A0B21C387D300EDBBB3 /* ExportPrivateKeyModel.m in Sources */,
+				181CD86C218C424900E17105 /* UIButton+EnlargeTouchArea.m in Sources */,
+				189D136B21A690C4006EA5C2 /* BaseNetworkRequest.m in Sources */,
+				182DF9CA21CCD55000F444EB /* BTCAddress.m in Sources */,
+				187AF64A21CB65CE00849E37 /* TransferRequest.m in Sources */,
+				18D232742195604300DD263A /* AccountExchangeViewController.m in Sources */,
+				182DF91E21CCCC9900F444EB /* memzero.c in Sources */,
+				182DF9C921CCD55000F444EB /* BTCBigNumber.m in Sources */,
+				182DF90721CCCA9900F444EB /* hmac.c in Sources */,
+				18BE42A621B65E9700BE3FDE /* tommath.c in Sources */,
+				183E304821ABEA1B008962BC /* testsetsateaset.m in Sources */,
+				181CD875218C4B5B00E17105 /* InPrivateKeyViewController.m in Sources */,
+				1888830921AE884400A2338B /* NSDate+JKExtension.m in Sources */,
+				1858181221B76DAD003AEB04 /* NSString+Category.m in Sources */,
+				187E8A0321C3465E00EDBBB3 /* AccountManager.m in Sources */,
+				18BE429421B6592000BE3FDE /* NSDate+ExFoundation.m in Sources */,
+				182DF9D021CCD59700F444EB /* BTCProtocolSerialization.m in Sources */,
+				18CEEE9E218D9CDF00F22EE4 /* HomeAssetTableViewCell.m in Sources */,
+				187A016E21940742004D4D0F /* TransferViewController.m in Sources */,
+				187E8A0821C380D700EDBBB3 /* ResourceManagerModel.m in Sources */,
+				4B1F07CC21C8A62100B17ED6 /* NSData+Extend.m in Sources */,
+				18BE42A721B65E9700BE3FDE /* JKBigInteger.m in Sources */,
+				4B1F07CF21C8A62100B17ED6 /* SHAHash.m in Sources */,
+				182DF91B21CCCBD800F444EB /* sha2.c in Sources */,
+				187E8A0521C3465E00EDBBB3 /* AccountInfoKeysModel.m in Sources */,
+				4B1F07CD21C8A62100B17ED6 /* NSString+Base58.m in Sources */,
+				182DF92421CCD01800F444EB /* hasher.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		181CD832218C196500E17105 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				181CD83B218C196500E17105 /* ChainWalletTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		181CD83D218C196500E17105 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				181CD846218C196500E17105 /* ChainWalletUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		181CD838218C196500E17105 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 181CD81D218C196300E17105 /* ChainWallet */;
+			targetProxy = 181CD837218C196500E17105 /* PBXContainerItemProxy */;
+		};
+		181CD843218C196500E17105 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 181CD81D218C196300E17105 /* ChainWallet */;
+			targetProxy = 181CD842218C196500E17105 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		181CD827218C196300E17105 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				181CD828218C196300E17105 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		181CD82C218C196500E17105 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				181CD82D218C196500E17105 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		181CD848218C196500E17105 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		181CD849218C196500E17105 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		181CD84B218C196500E17105 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3598C308790189222FCFCBD2 /* Pods-ChainWallet.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VWK8ABX7UW;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/PrefixHeaderPch/PrefixHeader.pch";
+				INFOPLIST_FILE = ChainWallet/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = baic.ChainWalletDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		181CD84C218C196500E17105 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C24DBCAD3734A5B3640730D9 /* Pods-ChainWallet.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VWK8ABX7UW;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/PrefixHeaderPch/PrefixHeader.pch";
+				INFOPLIST_FILE = ChainWallet/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = baic.ChainWalletDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		181CD84E218C196500E17105 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 78DY588SK3;
+				INFOPLIST_FILE = ChainWalletTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = baic.ChainWalletTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChainWallet.app/ChainWallet";
+			};
+			name = Debug;
+		};
+		181CD84F218C196500E17105 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 78DY588SK3;
+				INFOPLIST_FILE = ChainWalletTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = baic.ChainWalletTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChainWallet.app/ChainWallet";
+			};
+			name = Release;
+		};
+		181CD851218C196500E17105 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 78DY588SK3;
+				INFOPLIST_FILE = ChainWalletUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = baic.ChainWalletUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ChainWallet;
+			};
+			name = Debug;
+		};
+		181CD852218C196500E17105 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 78DY588SK3;
+				INFOPLIST_FILE = ChainWalletUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = baic.ChainWalletUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ChainWallet;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		181CD819218C196300E17105 /* Build configuration list for PBXProject "ChainWallet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				181CD848218C196500E17105 /* Debug */,
+				181CD849218C196500E17105 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		181CD84A218C196500E17105 /* Build configuration list for PBXNativeTarget "ChainWallet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				181CD84B218C196500E17105 /* Debug */,
+				181CD84C218C196500E17105 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		181CD84D218C196500E17105 /* Build configuration list for PBXNativeTarget "ChainWalletTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				181CD84E218C196500E17105 /* Debug */,
+				181CD84F218C196500E17105 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		181CD850218C196500E17105 /* Build configuration list for PBXNativeTarget "ChainWalletUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				181CD851218C196500E17105 /* Debug */,
+				181CD852218C196500E17105 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 181CD816218C196300E17105 /* Project object */;
+}

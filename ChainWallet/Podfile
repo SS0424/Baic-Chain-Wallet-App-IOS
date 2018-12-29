@@ -1,0 +1,19 @@
+platform:ios,'9.0'
+target 'ChainWallet' do
+inhibit_all_warnings!
+pod 'AFNetworking','~> 3.1.0'
+pod 'ReactiveCocoa','2.4.7'
+pod 'Masonry', '~> 1.0'
+pod 'Toast','~> 4.0.0'
+pod 'YYText'
+pod 'YYCategories'
+pod 'JSONModel'
+pod 'LEEAlert', '~>1.1.6'
+pod 'IQKeyboardManager','~> 5.0.7'
+pod 'LBXScan/LBXZXing','~> 2.3'
+pod 'LBXScan/UI','~> 2.3'
+pod 'BGFMDB', '~> 2.0.9'
+pod 'GRKOpenSSLFramework'
+pod 'MLeaksFinder'
+
+end

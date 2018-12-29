@@ -1,0 +1,35 @@
+//
+//  PrefixHeader.pch
+//  ChainWallet
+//
+//  Created by apple on 2018/11/2.
+//  Copyright © 2018 zcw. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+
+#ifdef __OBJC__
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#define LBXScan_Define_ZXing   //下载了ZXing模块
+#define LBXScan_Define_UI     //下载了界面模块
+
+#import "UtilsMacro.h"
+#import "UrlMacro.h"
+#import <Masonry/Masonry.h>
+#import "ReactiveCocoa.h"
+#import "AccountManager.h"
+#import <Toast/Toast.h>
+//#define ACCOUNT_KEY   @"account_default"
+//#define ACCOUNT_NAME_VALUE  [[NSUserDefaults standardUserDefaults] objectForKey:ACCOUNT_KEY]
+
+
+#endif
+
+
+#endif /* PrefixHeader_pch */
