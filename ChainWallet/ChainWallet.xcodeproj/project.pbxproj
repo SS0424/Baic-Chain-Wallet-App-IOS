@@ -1069,7 +1069,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-ChainWallet/Pods-ChainWallet-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-ChainWallet/Pods-ChainWallet-frameworks.sh",
 				"${PODS_ROOT}/GRKOpenSSLFramework/OpenSSL-iOS/bin/openssl.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -1078,7 +1078,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChainWallet/Pods-ChainWallet-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ChainWallet/Pods-ChainWallet-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		6BB29A9CE61DB19873A4E5AE /* [CP] Check Pods Manifest.lock */ = {
@@ -1105,7 +1105,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-ChainWallet/Pods-ChainWallet-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-ChainWallet/Pods-ChainWallet-resources.sh",
 				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
 				"${PODS_ROOT}/LBXScan/LBXScan/UI/CodeScan.bundle",
 			);
@@ -1116,7 +1116,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChainWallet/Pods-ChainWallet-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ChainWallet/Pods-ChainWallet-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

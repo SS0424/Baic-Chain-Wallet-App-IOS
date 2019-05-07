@@ -25,13 +25,14 @@
 @property (copy,nonatomic) NSString *wif;
 @property (copy,nonatomic) NSArray *keyArray;
 @property (copy,nonatomic) NSString *name;
+@property (copy,nonatomic) NSString *memo;
 
 @property (strong,nonatomic) TransferModel *transferModel;
 @property (strong,nonatomic) NSString *requirePubKey;
 @end
 
 @implementation TransferRequest
-- (instancetype)initWithTo:(NSString *)to Quantity:(NSString *)quantity Wif:(NSString *)wif PubkeyArray:(NSArray *)keyarray{
+- (instancetype)initWithTo:(NSString *)to Memo:(NSString *)memo Quantity:(NSString *)quantity Wif:(NSString *)wif PubkeyArray:(NSArray *)keyarray{
     if (self = [super init]) {
         _to = to;
         _quantity = quantity;
@@ -40,6 +41,7 @@
         self.wif = wif;
         self.keyArray = [NSArray arrayWithArray:keyarray];
         self.name = @"transfer";
+        _memo = memo;
     }
     return self;
 }
@@ -50,10 +52,15 @@
 
 - (void)transferToekn{
     //jsontobin
-    NSString *memo = @"iOS";
     NSString *code = @"baic.token";
+    NSArray *tempArray = [_quantity componentsSeparatedByString:@" "];
+    //baic,code = baic  其他 baic.token
+    if ([[tempArray lastObject] isEqualToString:@"BAIC"]) {
+        code = @"baic";
+    }
+    
     NSString *action = self.name;
-    NSArray *args = @[ACCOUNT_NAME_VALUE,_to,_quantity,memo];
+    NSArray *args = @[ACCOUNT_NAME_VALUE,_to,_quantity,_memo];
     NSMutableDictionary *param = [NSMutableDictionary dictionary];
     [param setObject:code forKey:@"code"];
     [param setObject:action forKey:@"action"];
@@ -157,7 +164,15 @@
     [transacDic setObject:@0 forKey:@"max_net_usage_words"];
     
     NSMutableDictionary *actionDict = [NSMutableDictionary dictionary];
-    [actionDict setObject:@"baic.token" forKey:@"account"];
+    
+    NSArray *tempArray = [_quantity componentsSeparatedByString:@" "];
+    //baic,code = baic  其他 baic.token
+    if ([[tempArray lastObject] isEqualToString:@"BAIC"]) {
+        [actionDict setObject:@"baic" forKey:@"account"];
+    }else{
+        [actionDict setObject:@"baic.token" forKey:@"account"];
+    }
+
     [actionDict setObject:@"transfer" forKey:@"name"];
     [actionDict setObject:self.transferModel.binargs forKey:@"data"];
     

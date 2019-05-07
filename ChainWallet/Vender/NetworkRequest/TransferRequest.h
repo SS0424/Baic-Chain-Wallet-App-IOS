@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 typedef void(^TransferBlock)(void);
 
 @interface TransferRequest : BaseNetworkRequest
-- (instancetype)initWithTo:(NSString *)to Quantity:(NSString *)quantity Wif:(NSString *)wif PubkeyArray:(NSArray *)keyarray;
+- (instancetype)initWithTo:(NSString *)to Memo:(NSString *)memo Quantity:(NSString *)quantity Wif:(NSString *)wif PubkeyArray:(NSArray *)keyarray;
 
 - (void)transferToekn;
 

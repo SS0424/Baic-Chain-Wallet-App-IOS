@@ -81,7 +81,7 @@
 }
 - (void)createDadaSource{
     @weakify(self);
-    GetBalanceRequest *request = [[GetBalanceRequest alloc]initWithCode:@"baic.token" Account:ACCOUNT_NAME_VALUE Symbol:@[@"DUSD",@"DCNY",@"BAIC"]];
+    GetBalanceRequest *request = [[GetBalanceRequest alloc]initWithCode:@"baic.token" Account:ACCOUNT_NAME_VALUE Symbol:@[@"DUSD",@"BAIC"]];
     
     [request didloadBalanceDataSourceResultSuccess:^{
         @strongify(self);
@@ -253,6 +253,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
     if (indexPath.section == 1) {
         TokenModel *model = [AccountManager sharedManager].tokenArray[indexPath.row];
         TokenViewController *token = [[TokenViewController alloc]initWithViewControllerTitle:model];

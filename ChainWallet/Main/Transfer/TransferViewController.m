@@ -26,6 +26,8 @@
 @property (strong,nonatomic) UILabel *addressLabel;
 //收款地址
 @property (strong,nonatomic) UITextField *addressTextField;
+//备注
+@property (strong,nonatomic) UITextField *memoTextField;
 //下一步
 @property (strong,nonatomic) UIButton *nextBtn;
 //扫一扫
@@ -111,14 +113,28 @@
     NSArray *array = [[AccountManager sharedManager]current_account_info];
     AccountInfoModel *model =[array firstObject];
     NSString *acwif = [AESCrypt decrypt:model.active_privatekey password:pwd];
-    NSString *countStr = [NSString stringWithFormat:@"%.9f",[_sumTextField.text doubleValue]];
-    NSString *quantity = [NSString stringWithFormat:@"%@ %@",countStr,_tokenModel.token];
+    
+    
+    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+    formatter.numberStyle = kCFNumberFormatterDecimalStyle;
+    NSString *formatterString = @"##0.";
+    NSArray *tempArray = [_tokenModel.count componentsSeparatedByString:@"."];
+    NSInteger location = [[tempArray lastObject] length];
+    for (int i = 0 ; i < location; i++) {
+       formatterString =  [formatterString stringByAppendingString:@"0"];
+    }
+    formatter.positiveFormat = formatterString; // 正数格式
+    // 注意传入参数的数据长度，可用double
+    NSString *money = [formatter stringFromNumber:[NSNumber numberWithDouble:[_sumTextField.text doubleValue]]];
+    DLog(@"money = %@",money);
+    
+    NSString *quantity = [NSString stringWithFormat:@"%@ %@",money,_tokenModel.token];
     NSMutableArray *keyArray = [NSMutableArray array];
     [keyArray addObject:[AESCrypt decrypt:model.active_publickey password:pwd]];
     [keyArray addObject:[AESCrypt decrypt:model.owner_publickey password:pwd]];
 
     if (acwif.length > 0 ) {
-        _requet = [[TransferRequest alloc] initWithTo:_addressTextField.text Quantity:quantity Wif:acwif PubkeyArray:keyArray];
+        _requet = [[TransferRequest alloc] initWithTo:_addressTextField.text Memo:_memoTextField.text Quantity:quantity Wif:acwif PubkeyArray:keyArray];
         [_requet transferToekn];
         @weakify(self);
         _requet.success = ^{
@@ -162,6 +178,15 @@
         make.top.equalTo(bgView1.mas_bottom).offset(kScaleX(10));
     }];
     
+    UIView *bgView3 = [[UIView alloc]init];
+    [self.view addSubview:bgView3];
+    bgView3.backgroundColor = kUIColorWithRGB(255, 255, 255);
+    [bgView3 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.equalTo(self.view);
+        make.height.equalTo(@(kScaleX(67)));
+        make.top.equalTo(bgView2.mas_bottom).offset(kScaleX(10));
+    }];
+
     
     _tokenLabel = [[UILabel alloc]init];
     [bgView1 addSubview:_tokenLabel];
@@ -231,6 +256,26 @@
         make.size.mas_equalTo(CGSizeMake(kScaleX(315), kScaleX(50)));
     }];
     
+    UILabel *memoLabel = [[UILabel alloc]init];
+    [bgView3 addSubview:memoLabel];
+    memoLabel.textColor = kUIColorWithRGB(67, 86, 99);
+    memoLabel.font = kUIFontWithSemiboldSize(kScaleX(12));
+    [memoLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(bgView3).offset(kScaleX(16));
+        make.top.equalTo(bgView3).offset(kScaleX(10));
+    }];
+    memoLabel.text = NSLocalizedString(@"备注", nil);
+    
+    _memoTextField = [[UITextField alloc]init];
+    [bgView3 addSubview:_memoTextField];
+    _memoTextField.textColor = kUIColorWithRGB(67, 86, 99);
+    _memoTextField.font = kUIFontWithMediumSize(kScaleX(16));
+    _memoTextField.keyboardType = UIKeyboardTypeASCIICapable;
+    [_memoTextField mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(bgView3).offset(kScaleX(16));
+        make.bottom.equalTo(bgView3).offset(-kScaleX(11));
+    }];
+    _memoTextField.placeholder = NSLocalizedString(@"输入备注", nil);
 }
 
 /*

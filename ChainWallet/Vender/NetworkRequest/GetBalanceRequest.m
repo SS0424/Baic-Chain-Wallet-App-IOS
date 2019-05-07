@@ -42,8 +42,11 @@
     for (int i = 0; i < _symbolArray.count; i++) {
         dispatch_group_async(group, queue, ^{
             self.symbol = self.symbolArray[i];
-            
-            NSDictionary *params = @{@"code":self.code,
+            NSString *code = @"baic.token";
+            if ([self.symbol isEqualToString:@"BAIC"]) {
+                code = @"baic";
+            }
+            NSDictionary *params = @{@"code":code,
                                     @"account":self.account,
                                     @"symbol":self.symbol
                                     };
