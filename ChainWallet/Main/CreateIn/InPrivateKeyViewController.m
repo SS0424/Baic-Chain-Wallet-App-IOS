@@ -30,9 +30,7 @@
 
 - (void)createRAC{
 #define debug
-    
-    self.keyTextView.text = @"5K9zvYRS9YCP7FBfejm74Ud1nKWhynf8kEMV9b7xY4CKbDxaTrE";
-    
+
     @weakify(self);
     [[_nextBtn rac_signalForControlEvents:UIControlEventTouchUpInside]subscribeNext:^(id x) {
         @strongify(self);
